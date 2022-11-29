@@ -299,7 +299,7 @@ public final class NIOSSLPrivateKey {
     ///
     /// In general, however, this function should be avoided in favour of one of the convenience
     /// initializers, which ensure that the lifetime of the EVP_PKEY object is better-managed.
-    static internal func fromUnsafePointer(takingOwnership pointer: UnsafeMutablePointer<EVP_PKEY>) -> NIOSSLPrivateKey {
+    static public func fromUnsafePointer(takingOwnership pointer: UnsafeMutablePointer<EVP_PKEY>) -> NIOSSLPrivateKey {
         return NIOSSLPrivateKey(withReference: pointer)
     }
 
